@@ -42,14 +42,16 @@ const Cart = () => {
 									.toFixed(2)}
 							</span>
 						</div>
-						<div className='carbon'>
-							<img
-								src='/assets/images/icon-carbon-neutral.svg'
-								alt='carbon neutral'
-							/>
-							<span>
-								This is a <b>carbon-neutral</b> delivery
-							</span>
+						<div className="carbon-wrapper">
+							<div className='carbon'>
+								<img
+									src='/assets/images/icon-carbon-neutral.svg'
+									alt='carbon neutral'
+								/>
+								<span>
+									This is a <b>carbon-neutral</b> delivery
+								</span>
+							</div>
 						</div>
 						<Button
 							onClick={() => {

@@ -1,14 +1,19 @@
+import { useEffect } from 'react';
 import './App.scss';
 import Cart from './components/cart/cart';
 import ProductDisplay from './components/productDisplay/productDisplay';
 import data from './data.json';
 
 function App() {
+	useEffect(() => {
+		document.title = 'Product list';
+	}, []);
+
 	return (
 		<div className='App'>
 			<main>
 				<h1>Desserts</h1>
-				<div className="grid">
+				<div className='grid'>
 					{data.map((product, index) => (
 						<ProductDisplay
 							id={index}
