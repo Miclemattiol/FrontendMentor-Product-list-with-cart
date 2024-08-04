@@ -1,0 +1,71 @@
+.ConfirmDialog[open] {
+	max-height: 100dvh;
+	max-width: 100dvw;
+	height: 100dvh;
+	width: 100dvw;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: rgba(0, 0, 0, 0.1);
+	border: 0;
+
+	main {
+		background-color: white;
+		display: flex;
+		flex-direction: column;
+		gap: 16px;
+		height: fit-content;
+		padding: 32px;
+		border-radius: 16px;
+
+		& > svg {
+			fill: var(--green);
+		}
+
+		& > .message {
+			h1 {
+				font-size: 2.5rem;
+			}
+
+			span {
+				color: var(--rose-500);
+			}
+		}
+
+		.items {
+			display: flex;
+			flex-direction: column;
+			gap: 16px;
+			background-color: var(--rose-50);
+			padding: 16px;
+			border-radius: 8px;
+
+			& > .total {
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+
+				& > .text {
+					font-size: 0.8rem;
+				}
+
+				& > .price {
+					font-size: 1.2rem;
+					font-weight: 800;
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 750px) {
+	.ConfirmDialog[open] {
+		justify-content: flex-end;
+
+		main {
+			border-bottom-right-radius: 0;
+			border-bottom-left-radius: 0;
+		}
+	}
+}

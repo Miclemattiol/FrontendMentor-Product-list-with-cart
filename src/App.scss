@@ -1,0 +1,62 @@
+div.App {
+	display: flex;
+	flex-direction: row;
+	padding: 32px;
+	gap: 32px;
+	max-height: 100dvh;
+
+	& > main {
+		flex: 1;
+		padding-right: 16px;
+		overflow-y: auto;
+		display: flex;
+		flex-direction: column;
+		gap: 32px;
+
+		& > .grid {
+			display: grid;
+			grid-template-columns: repeat(auto-fill, minmax(192px, 1fr));
+			gap: 16px;
+		}
+	}
+}
+
+@media screen and (min-width: 751px) {
+	div.App {
+		& > aside {
+			max-height: 100dvh;
+		}
+	}
+}
+
+@media screen and (max-width: 749px) {
+	div.App {
+		flex-direction: column;
+		padding: 16px;
+		max-height: fit-content;
+		align-items: center;
+
+		& > main {
+			width: 100%;
+			padding-right: 0px;
+
+			& > .grid {
+				grid-template-columns: repeat(auto-fill, minmax(256px, 1fr));
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 350px) {
+	div.App {
+		& > aside {
+			width: 100%;
+		}
+
+		& > main {
+			& > .grid {
+				grid-template-columns: 100%;
+			}
+		}
+	}
+}

@@ -1,0 +1,58 @@
+div.CartTile {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	justify-content: space-between;
+	padding-bottom: 16px;
+	border-bottom: 2px solid var(--rose-50);
+	width: 100%;
+	height: 64px;
+
+	div.info {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-around;
+		height: 100%;
+
+		span.title {
+			font-weight: 500;
+			// color: var(--rose-900);
+		}
+
+		section {
+			display: flex;
+			flex-direction: row;
+			align-items: center;
+			gap: 8px;
+
+			.quantity {
+				color: var(--red);
+			}
+
+			.price {
+				color: var(--rose-500);
+
+				&.total {
+					font-weight: 500;
+				}
+			}
+		}
+	}
+
+	svg {
+		--size: 16px;
+		width: var(--size);
+		height: var(--size);
+		fill: var(--rose-300);
+		border: 1.5px solid var(--rose-300);
+		border-radius: 50%;
+		padding: 1px;
+		cursor: pointer;
+		transition: 0.2s;
+
+		&:hover {
+			fill: var(--rose-500);
+			border-color: var(--rose-500);
+		}
+	}
+}
